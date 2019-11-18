@@ -1,12 +1,12 @@
 name: final_app
 title: final_app
 username:
-account: maximeye
+account: kevintellier
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
-appId: 1327621
-bundleId: 2583386
-url: https://maximeye.shinyapps.io/final_app/
-when: 1573572446.58178
+appId: 1487108
+bundleId: 2597674
+url: https://kevintellier.shinyapps.io/final_app/
+when: 1574086541.93872
 asMultiple: FALSE
 asStatic: FALSE
