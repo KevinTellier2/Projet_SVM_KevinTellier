@@ -3,9 +3,9 @@
 &nbsp;
 
 
-<p style="text-align:justify";>This project has been made by Caroline ROBLIN, Maxime YE and Kevin TELLIER, students at the <a href="https://www.univ-orleans.fr/deg/masters/ESA/" title="ESA Master"> ESA Master</a>'s degree, for the Big Data Analytics : Support Vector Machine course, instructed by <a href="https://sites.google.com/view/christophe-hurlin/home?authuser=0" title="Christophe Hurlin">Christophe Hurlin</a>.</p>
+<p style="text-align:justify";>This project has been made by Caroline ROBLIN, Maxime YE and Kevin TELLIER, students at the <a href="https://www.univ-orleans.fr/deg/masters/ESA/" target="_blank" title="ESA Master"> ESA Master</a>'s degree, for the Big Data Analytics : Support Vector Machine course, instructed by <a href="https://sites.google.com/view/christophe-hurlin/home?authuser=0" target="_blank" title="Christophe Hurlin">Christophe Hurlin</a>.</p>
 
-<p style="text-align:justify";>The datasets we used in this project are FREE and disponible <a href="https://www.kaggle.com/mlg-ulb/creditcardfraud" title="here">here</a>.</p>
+<p style="text-align:justify";>The datasets we used in this project are FREE and disponible <a href="https://www.kaggle.com/mlg-ulb/creditcardfraud" target="_blank" title="here">here</a>.</p>
 
 &nbsp;
 
@@ -28,7 +28,7 @@ Internally, we used about 15 libraries and a mostly package to manage all the ca
 
 For a description of the implementation and details of the algorithms used, please refer to : 
 
-- <a href="https://cran.r-project.org/web/packages/mlr/mlr.pdf" title="MLR : A library for Machine Learning in R">MLR : A library for Machine Learning in R</a>
+- <a href="https://cran.r-project.org/web/packages/mlr/mlr.pdf" target="_blank" title="MLR : A library for Machine Learning in R">MLR : A library for Machine Learning in R</a>
 
 &nbsp;
 

@@ -25,7 +25,7 @@ output:
 
 <strong>For more informations :</strong>
 
-Open the <a href="https://github.com/maximeye/projetSVM/blob/master/README.md" title="README.md here" target="_blank">README.md here</a>. 
+Open the <a href="https://github.com/KevinTellier2/Projet_SVM_KevinTellier/blob/master/README.md" title="README.md here" target="_blank">README.md here</a>. 
 
 Get the <a href="https://www.dropbox.com/s/njaxrlmk93eayc3/User%20Manual%20-%20Roblin%20-%20Tellier%20-%20YE.html?dl=1" title="usual manual here" target="_blank">usual manual here</a>.
 
