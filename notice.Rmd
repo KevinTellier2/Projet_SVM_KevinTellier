@@ -1,0 +1,240 @@
+---
+title: "User Manual"
+author: "Made by : ROBLIN Caroline, TELLIER Kevin, YE Maxime"
+date: '`r format(Sys.time(), "%d %B %Y")`'
+output:
+  html_document:
+    highlight: tango
+    theme: journal
+  pdf_document: default
+---
+
+
+&nbsp;
+
+&nbsp;
+
+
+<strong style="color:black">The purpose of our demonstrator is to compare the performance of the SVM machine learning method with other machine learning methods (Logistic Regression, Decision Tree, Random Forest, Gradient Boosting, Xgboost). </strong>
+
+&nbsp;
+
+
+<span style="color:red">Note : the loading of the application depends on the network connection.  
+Depending on the network speed, the application may take further time to load.</span>
+
+&nbsp;
+
+
+### <span style="color: #127063">Project informations</span>  
+
+&nbsp;
+
+<center>
+
+![<strong>1<sup>st</sup> panel : Informations about the project</strong>](onglet00.png)
+
+</center>
+
+&nbsp;
+
+<p style="text-align:justify";>In a first tab, there are some informations about our project.  
+There is also a link to access the README file as well as a link to download the manual.</p>
+
+&nbsp;
+
+
+### <span style="color: #127063">Explanations of the methodology</span>
+
+&nbsp;
+
+<center>
+
+![<strong>2<sup>nd</sup> panel : Brief description of SVM and methodology</strong>](onglet0.png)
+
+</center>
+
+&nbsp;
+
+<p style="text-align:justify";>In a first part, we briefly explain the concept of SVMs and in a second part the different kernels.  
+In the last part, we describe the various modifications made to the initial database and the methodology used to build the demonstrator. </p>
+
+
+### <span style="color: #127063">Data presentation</span>
+
+&nbsp;
+
+<center>
+
+![<strong>3<sup>rd</sup> panel : Data presentation</strong>](onglet1.png)
+
+</center>
+
+&nbsp;
+
+<p style="text-align:justify";>First, you have the dimension of the dataset. So we have 316295 observations and all the 31 the variables (the output & 30 explanatory variables).
+Then, you can observe two histograms, which represent on the left the importance of the 30 independant variables, given by the information gain ; and on the right side, the result of a significant test is shown, based on the Khi-2 test.</p>
+
+
+<p style="text-align:justify";>Before continuing, it's important to specify that for models to work properly, the  <span style="color: #127063">SMOTE</span> function was used to resample the original sample which had rare default (when the occurrence 1 is near to 1%).
+This function creates other observations with the 1 occurence, using the probability to determine the values of the other variables. So you go from 284315 with the value of class 0 and 492 with the value of class 1, to 284315 with the value of class 0 and 31980 with the value of class 1, because we smote to have 10% of the occurence 1.</p>
+&nbsp;
+
+### <span style="color: #127063">Comparison of SVM with another model</span>
+
+&nbsp;
+
+<center>
+
+![<strong>4<sup>th</sup> panel : Comparing SVM with another Machine Learning model</strong>](onglet2.png)
+
+</center>
+
+&nbsp;
+
+
+
+#### <span style="color: #127063">__Inputs__</span>
+
+&nbsp;
+
+
+##### <span style="color: #127063">_Model to compare with svm_</span>
+
+&nbsp;
+
+<p style="text-align:justify";>You just have to select the model you want to compare with the SVM, as the : </p>
+
+- Logistic Regression
+- Decision Tree
+- Random Forest
+- Gradient Boosting
+- XGBoost
+
+&nbsp;
+
+<p style="text-align:justify";>When you select another model than the logistic regression, beside,  you have parameters than you can change as you wish. They are selected in a way that they are optimal when you choose your model. The list of parameters (with the default value in brackets, as a reminder if you change that and want recover them) is : </p>
+
+* <strong>for the Decision Tree : </strong></p>
+  * <strong>Minsplit :</strong> represents the minimum number of observations in a node for a split to take place. (35) </p>
+  * <strong>Minbucket :</strong> says the minimum number of observations I should keep in terminal nodes. (10) </p>
+  * <strong>Cp :</strong> it's the complexity parameter. (0.167) </p>
+
+* <strong>for the Random Forest : </strong></p>
+  * <p style="text-align:justify";><strong>Number of trees :</strong> number of trees to grow. Larger number of trees produce more stable models and covariate importance estimates, but require more memory and a longer run time. (108) </p>  
+  * <p style="text-align:justify";><strong>Node Size :</strong> minimum size of terminal nodes. Setting this number larger causes smaller trees to be grown (and thus take less time). (11) </p>
+  * <strong>Mtry :</strong> number of variables available for splitting at each tree node. (11) </p>
+
+* <strong>for the Gradient Boosting :</strong> </p>
+  * <p style="text-align:justify";><strong>N trees :</strong> The total number of trees to fit. GBMs often require many trees; however, unlike random forests GBMs can overfit so the goal is to find the optimal number of trees that minimize the loss function of interest with cross validation. (414) </p>
+  * <strong>Interaction depth :</strong> Number of splits GBM has to perform on a tree (starting from a single node). (7) </p>
+  * <strong>Min obs in node :</strong> Refers to the minimum number of observations in a tree node. (17) </p>  
+  * <strong>Shrinkage :</strong> It's the regulation parameter which dictates how fast / slow the algorithm should move. (0.268) </p>
+
+* <strong>for the XGBoost :</strong> </p>
+  * <strong>Nround :</strong> It controls the maximum number of iterations. (481) </p>
+  * <strong>Max depth :</strong> It controls the depth of the tree. Larger the depth, more complex the model; higher chances of overfitting. (16) </p>
+  * <strong>Lambda :</strong> It controls L2 regularization (equivalent to Ridge regression) on weights. It is used to avoid overfitting. (0.563) </p>
+  * <p style="text-align:justify";><strong>Eta :</strong> It controls the learning rate, i.e., the rate at which our model learns patterns in data. After every round, it shrinks the feature weights to reach the best optimum. (0.183) </p>
+  * <strong>Sub sample :</strong> It controls the number of samples supplied to a tree. (0.328) </p>
+  * <strong>Min child weight :</strong> it blocks the potential feature interactions to prevent overfitting. (1.83) </p>
+  * <strong>Col sample by tree :</strong> It controls the number of variables supplied to a tree. (0.41) </p>
+
+&nbsp;
+
+##### <span style="color: #127063">_SVM Kernel_</span>
+
+<p style="text-align:justify";>You can choose between those four kernels : </p>
+
+- Linear </p>
+- Polynomial </p>
+- Radial Basis </p>
+- Sigmoid </p>
+
+
+<p style="text-align:justify";>The best kernel is linear, and it's selected by default. The optimal parameters are given by default aswell, but you can change them as you like and observe the result.</p>
+
+&nbsp;
+
+##### <span style="color: #127063">_Kernel_</span>
+
+<p style="text-align:justify";>As a reminder, the optimal kernel is linear. </p>
+
+&nbsp;
+
+##### <span style="color: #127063">_C_</span>
+
+<p style="text-align:justify";>As a reminder, the optimal C is 42.03045. </p>
+
+&nbsp;
+
+##### <span style="color: #127063">_Sample size (the larger the size chosen, the longer the processing time will be)_</span>
+
+<p style="text-align:justify";>To get the results faster, the default observation value is set 1,000 observations, but you can aswell change it with the cursor.</p>
+
+Note that the sample size chosen has been split into two samples, with 70% of the data for the train dataset, and 30% for the test dataset.
+<span style="color:red">The performances displayed are based on the test sample. </span>
+
+&nbsp;
+
+&nbsp;
+
+#### <span style="color: #127063">__Outputs__</span>
+
+
+<p style="text-align:justify";>You could observe the following : </p>
+
+- SVM : Gini coefficient </p>
+- SVM : confusion matrix </p>
+- SVM : good classification rate </p>
+- Selected model : Gini coefficient </p>
+- Selected model : Confusion matrix </p>
+- Selected model : good classification rate </p>
+- ROC Curve comparison between the SVM and the selected model </p>
+
+
+<p style="text-align:justify";>You have to be patient when you change the model selected to be compared to the SVM : <span style="color:red">Warning message can appear</span>, but it's just for the loading time. </p>
+&nbsp;
+
+### <span style="color: #127063">Comparison of each model's performance - ROC Curve</span>
+
+
+<center>
+
+![<strong>5<sup>th</sup> panel : Comparing model performance</strong>](onglet3.png)
+
+</center>
+
+&nbsp;
+
+#### <span style="color: #127063">__Inputs__</span>
+
+##### <span style="color: #127063">_Sample size (the larger the size chosen, the longer the processing time will be)_</span>
+
+<p style="text-align:justify";>To get the results faster, the default observation value is set 1,000 observations, but you can aswell change it with the cursor.</p>
+
+&nbsp;
+
+#### <span style="color: #127063">__Outputs__</span>
+
+<p style="text-align:justify";>You can observe in the same graphic the ROC curve for each model, with the default optimal parameters.</p>
+You can see that it isn't easy to choose the best model regardless of the sample size because of the crossing. It's better to refer to the Gini index or the good classification rate we have in the previous tab.  </p>
+
+&nbsp;
+
+
+### <span style="color: #127063">Conclusion</span>  
+
+&nbsp;
+
+<center>
+
+![<strong>6<sup>th</sup> panel : Brief conclusion</strong>](onglet4.png)
+
+</center>
+
+&nbsp;
+
+<p style="text-align:justify";>In the last tab, there is a brief conclusion about our project on the fraud detection using the SVM method.</p>
+
+&nbsp;
