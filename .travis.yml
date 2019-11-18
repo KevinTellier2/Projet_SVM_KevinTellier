@@ -15,6 +15,12 @@ apt_packages:
 
 r_packages:
   - rsconnect
+  - crosstalk
+  - htmlwidgets
+  - manipulateWidget
+  - miniUI
+  - misc3d
+  - rgl
   - shiny
   - tidyverse
   - kableExtra
