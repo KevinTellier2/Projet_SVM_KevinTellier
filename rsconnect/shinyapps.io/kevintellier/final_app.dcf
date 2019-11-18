@@ -1,0 +1,12 @@
+name: final_app
+title: final_app
+username:
+account: kevintellier
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 1487108
+bundleId: 2597856
+url: https://kevintellier.shinyapps.io/final_app/
+when: 1574090643.47162
+asMultiple: FALSE
+asStatic: FALSE
