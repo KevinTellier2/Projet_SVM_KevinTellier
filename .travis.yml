@@ -18,16 +18,21 @@ r_packages:
   - shiny
   - tidyverse
   - kableExtra
+  - e1071
+  - smotefamily
+  - ggplot2
+  - ROCR
+  - leaps
+  - caTools
+  - MASS
+  - ROCR
+  - mlr
+  - FSelector
+  - rpart
+  - gbm
+  - xgboost
+  - ggplot2
+  - ineq
   
 script:
   - R -f deploy.R
-
-notifications:
-  email:
-   - maxime.ye@gmail.com
-   
-  email:
-    recipients:
-     - maxime.ye@gmail.com
-    on_success: <always|never|change>  # default: change
-    on_failure: <always|never|change>  # default: always
